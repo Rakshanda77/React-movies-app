@@ -40,11 +40,12 @@ class MovieCategory extends Component {
                 onChange={this.handleInputChange} size = "50" />
                  */}
               <select className='SelectData'
-              onChange={this.handleChange}
+              onChange={this.handleChange}>
               value={this.state.query} >
-              <option className='option1' value = "movies" selected id="basic-button">Select type</option>
+              {/* <option className='option1' value = "movies" selected id="basic-button">Select type</option> */}
+              <option value = "popular">Popular</option>
                   <option value="now_playing">now_playing</option>
-                  <option value = "popular">Popular</option>
+                 
                   <option value = "top_rated">top_rated</option> 
                   <option value = "upcoming">upcoming</option> 
                    </select>

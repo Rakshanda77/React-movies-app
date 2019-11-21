@@ -97,6 +97,7 @@ export default function FullWidthTabs() {
 
         <TabPanel value={value} index={1}>
           <h3>Please Enter A Search</h3>
+         
       
           </TabPanel>
 

@@ -6,6 +6,7 @@ import { api_key, TV_URL } from '../config/api_config'
 var a="popular"
 class TvRows extends Component{constructor (props){
   a=props.values;
+  console.log(a)
 super(props)
   this.state= {
     option: props.values,
@@ -45,7 +46,10 @@ const url= TV_URL+a
     throw error
     }
 }
+componentDidMount(){
+  this.makeSearch()
 
+}
 componentWillUpdate(){
   this.makeSearch()
 }

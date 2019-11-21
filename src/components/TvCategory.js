@@ -30,8 +30,8 @@ class TvCategory extends Component {
 
         render() {
           var val=this.state.query
-          
-      function call(){ return(<TvRow option={val}/>)}
+          console.log(val)
+      function call(){ return(<TvRow values={val}/>)}
            
           return (
               <div className='data'>
@@ -40,12 +40,14 @@ class TvCategory extends Component {
                 onChange={this.handleInputChange} size = "50" />
                  */}
               <select className='SelectData'
-              onChange={this.handleChange}
+              onChange={this.handleChange}>
               value={this.state.query} >
-              <option className='option1' value = "movies" selected id="basic-button">Select type</option>
+
+              {/* <option className='option1' value = "tv" >Select type</option> */}
+              <option value = "popular">Popular</option> 
                   <option value="airing_today">airing_today</option>
                   <option value = "on_the_air">on_the_air</option>
-                  <option value = "popular">Popular</option> 
+                 
                   <option value = "top_rated">top_rated</option> 
                    </select>
             </form>

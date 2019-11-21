@@ -5,6 +5,8 @@ import { Button, Select,TextField } from '@material-ui/core';
 import '../App.css';
 import SearchRows from './SearchRow';
 
+
+
 class SearchBar extends Component {
 
   state = {
@@ -18,6 +20,11 @@ class SearchBar extends Component {
         new SearchRows({"newvar": this.state.query})
      }
 render() {
+  var val=this.state.query
+  
+  function call (){ 
+    return(<SearchRows option={val}/>)}
+       
  return (
       
  <div className='searchdata'>
@@ -25,18 +32,23 @@ render() {
                <input placeholder="Search" className='input' 
                onChange={this.handleChange}
                 size = "20" />
-                <select className='SelectData'>
+                <select className='SelectData'
+                 onChange={this.handleChange}>
               <option className='option1' value = "movies" selected id="basic-button">Select type</option>
                   <option value="now_playing">Movie</option>
                   <option value = "popular">Multi</option>
                   <option value = "top_rated">Tv</option> 
                   </select>
+                 
 </form>
 
-            <Button class='submit'>SEARCH</Button>
-             <p>{this.state.query}</p>  
-    
+            <Button class='submit'
+           >SEARCH</Button>
+             {/* <p>{this.state.query}</p>   */}
+            
+            
     </div>
+    
       
     )
 }
