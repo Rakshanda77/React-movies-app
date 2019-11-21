@@ -3,11 +3,12 @@ import React, { Component } from 'react';
 import { SearchBar } from 'react';
 import {Container} from 'react';
 import MovieRow from './MovieRow'
+import SearchRow from './SearchRow'
 
 import '../App.css';
 
 
-class MovieCategory extends Component {
+class SearchCategory extends Component {
   constructor (props){
 
     super(props)
@@ -16,6 +17,7 @@ class MovieCategory extends Component {
       x:""
     }
     
+
     }
  
    handleChange = event => {
@@ -34,7 +36,7 @@ class MovieCategory extends Component {
         render() {
           var val=this.state.query
          
-      function x (){ return(<MovieRow option={val}/>)}
+      function x (){ return(<SearchRow option={val}/>)}
            
           return (
               <div className='data'>
@@ -59,4 +61,4 @@ class MovieCategory extends Component {
           )
         }
        }
-       export default MovieCategory
+       export default SearchCategory

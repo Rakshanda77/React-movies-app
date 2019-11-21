@@ -3,6 +3,7 @@
 import React,{ Component } from 'react';
 import { Button, Select,TextField } from '@material-ui/core';
 import '../App.css';
+import SearchRows from './SearchRow';
 
 class SearchBar extends Component {
 
@@ -14,10 +15,7 @@ class SearchBar extends Component {
         this.setState({
           query: event.target.value
         })
-   
-      
-       
-        
+        new SearchRows({"newvar": this.state.query})
      }
 render() {
  return (
@@ -36,7 +34,7 @@ render() {
 </form>
 
             <Button class='submit'>SEARCH</Button>
-             <p>{this.state.query}</p> 
+             <p>{this.state.query}</p>  
     
     </div>
       

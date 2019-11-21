@@ -12,7 +12,9 @@ import MovieCategory from './MovieCategory'
 import TvCategory from './TvCategory'
 import TvRow from './TvRow';
 import MovieRow from './MovieRow';
+import SearchRow from './SearchRow'
 import SearchCategory from './SearchCategory'
+import SearchBar from './SearchBar'
 
 function TabPanel(props) {
   const { children, value, index,  } = props;
@@ -95,7 +97,7 @@ export default function FullWidthTabs() {
 
         <TabPanel value={value} index={1}>
           <h3>Please Enter A Search</h3>
-          <SearchCategory />
+      
           </TabPanel>
 
         <TabPanel value={value} index={2}>
